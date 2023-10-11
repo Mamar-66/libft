@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 08:31:31 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/09 09:37:48 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/11 15:17:31 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	the_dest = (char *)dest;
 	the_src = (char *)src;
 	i = 0;
-	if (!dest && !src && n)
+	if (!dest && !src)
 		return (NULL);
 	if (dest < src)
 	{

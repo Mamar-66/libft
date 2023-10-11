@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:36:35 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/06 21:04:13 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/11 12:06:19 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			i = i - j;
 			j = 0;
 		}
-		if ((little[j] == '\0' || j == (len)) && little[j] == '\0')
+		if (little[j] == '\0')
 		{
 			i = i - j + 1;
 			return ((char *)big + i);
