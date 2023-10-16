@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 10:33:44 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/16 16:28:20 by omfelk           ###   ########.fr       */
+/*   Created: 2023/10/16 17:14:06 by omfelk            #+#    #+#             */
+/*   Updated: 2023/10/16 18:30:32 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdint.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void		*ptr;
-	size_t		i;
-	size_t		max;
+	t_list	*new_node;
 
-	if (size)
-		max = SIZE_MAX / size;
-	if (nmemb > max)
+	new_node = (t_list *)malloc(sizeof(*new_node));
+	if (new_node == NULL)
 		return (NULL);
-	i = 0;
-	ptr = (void *)malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, (nmemb * size));
-	return (ptr);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
+/*
+int	main()
+{
+	char	*text = "text";
+	t_list	*list = ft_lstnew(text);
+	printf("%s\n", (char*)(list->content));
+	return (0);
+}*/

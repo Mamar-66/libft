@@ -6,13 +6,13 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 11:35:54 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/16 08:24:31 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/16 09:42:16 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	decomp(int n)
+static int	decomp(int n)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ int	decomp(int n)
 	return (i);
 }
 
-char	*creat_char(int n)
+static char	*creat_char(int n)
 {
 	int		i;
 	int		nb_c;

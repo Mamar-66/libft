@@ -6,13 +6,13 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:10:31 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/11 16:14:53 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/16 09:51:04 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	chr_set_deb(char const *text, char const *set, size_t size_set)
+static size_t	chr_set_deb(char const *text, char const *set, size_t size_set)
 {
 	size_t			i;
 	size_t			j;
@@ -32,7 +32,7 @@ size_t	chr_set_deb(char const *text, char const *set, size_t size_set)
 	return (i);
 }
 
-size_t	chr_set_fin(char const *text, char const *set, size_t size_set)
+static size_t	chr_set_fin(char const *text, char const *set, size_t size_set)
 {
 	size_t			i;
 	size_t			j;

@@ -6,13 +6,13 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 07:47:42 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/13 18:45:21 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/16 09:47:44 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	nb_word(char const *text, char caract_sep)
+static size_t	nb_word(char const *text, char caract_sep)
 {
 	size_t	i;
 	size_t	sep;
@@ -33,7 +33,7 @@ size_t	nb_word(char const *text, char caract_sep)
 	return (sep);
 }
 
-char	*mal_cpy(char const *text_org, size_t *start_pos, char c)
+static char	*mal_cpy(char const *text_org, size_t *start_pos, char c)
 {
 	char	*text;
 	size_t	i;
@@ -62,7 +62,7 @@ char	*mal_cpy(char const *text_org, size_t *start_pos, char c)
 	return (NULL);
 }
 
-void	ft_free(char **new_text, size_t nb_free)
+static void	ft_free(char **new_text, size_t nb_free)
 {
 	size_t	i;
 
