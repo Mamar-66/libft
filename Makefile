@@ -16,25 +16,27 @@ BONUS_OBJS	= ${BONUS:.c=.o}
 
 NAME	= libft.a
 
-RM		= rm
+RM		= rm -f
 
-GCC		= gcc
+CC		= cc
 
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
 ${NAME}:	${SRCS_OBJS}
-			ar rc ${NAME} ${SRCS_OBJS}
+			ar rcs ${NAME} ${SRCS_OBJS}
+%.o: %.c
+	${CC} ${CFLAGS} -o $@ -c $<
 
 all:	${NAME}
 
-clean: 
-		rm -f ${SRCS_OBJS} ${BONUS_OBJS}
+clean:
+		${RM} ${SRCS_OBJS} ${BONUS_OBJS}
 
 bonus:	${SRCS_OBJS} ${BONUS_OBJS}
 		ar rcs ${NAME} ${SRCS_OBJS} ${BONUS_OBJS}
 
 fclean: clean	
-		rm -f ${NAME}
+		${RM} ${NAME}
 
 re:		fclean all
 

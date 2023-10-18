@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:10:31 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/16 09:51:04 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/18 17:48:22 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static size_t	chr_set_fin(char const *text, char const *set, size_t size_set)
 
 	i = ft_strlen(text) - 1;
 	j = 0;
-	while (j <= size_set && i >= 0)
+	while (j <= size_set && i > 0)
 	{
 		if (text[i] == set[j])
 		{
