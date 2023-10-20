@@ -6,7 +6,7 @@
 /*   By: omfelk <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 10:33:44 by omfelk            #+#    #+#             */
-/*   Updated: 2023/10/18 17:51:28 by omfelk           ###   ########.fr       */
+/*   Updated: 2023/10/20 11:10:39 by omfelk           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,10 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void		*ptr;
-	size_t		max;
 
-	max = 0;
-	if (size)
-		max = SIZE_MAX / size;
-	if (nmemb > max)
-		return (NULL);
-	ptr = (void *)malloc(nmemb * size);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, (nmemb * size));
+	ft_memset(ptr, 0, (nmemb * size));
 	return (ptr);
 }
